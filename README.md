@@ -7,10 +7,7 @@ Bu repo, **dvdrental** örnek veritabanı üzerinden verilen SQL ödevlerini ve 
 
 ## 📂 İçerik
 - **Ödevler**
-    - film tablosu sorguları
-    - customer tablosu sorguları
 - **Projeler**
-    - (İleride eklenecek)
 
 ---
 
