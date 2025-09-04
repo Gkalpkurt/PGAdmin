@@ -15,3 +15,4 @@ SELECT last_name FROM customer WHERE first_name = 'Mary';
 SELECT * FROM film
 WHERE NOT (length > 50)
   AND rental_rate NOT IN (2.99, 4.99);
+
