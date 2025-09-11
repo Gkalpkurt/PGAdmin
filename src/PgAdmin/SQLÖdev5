@@ -1,0 +1,24 @@
+1) 'n' ile biten en uzun 5 film
+
+SELECT title, length, 'En Uzun İlk 5 Film' AS sorgu
+FROM film
+WHERE title LIKE '%n'
+ORDER BY length DESC
+LIMIT 5;
+
+2) 'n' ile biten en kısa filmlerden 6-10 arası
+
+SELECT title, length, 'En Kısa 6-10 Film' AS sorgu
+FROM film
+WHERE title LIKE '%n'
+ORDER BY length ASC
+OFFSET 5
+LIMIT 5;
+
+3) store_id = 1 olan customer'lardan soyada göre azalan sıralı ilk 4 kayıt
+
+SELECT customer_id, first_name, last_name, store_id, 'Müşteri Sıralama' AS sorgu
+FROM customer
+WHERE store_id = 1
+ORDER BY last_name DESC
+LIMIT 4;

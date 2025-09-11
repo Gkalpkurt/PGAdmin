@@ -1,0 +1,29 @@
+1) Film tablosunu rating değerlerine göre gruplama
+
+SELECT rating, COUNT(*) AS film_sayisi, 'Ratinge Göre Gruplama' AS sorgu
+FROM film
+GROUP BY rating;
+
+2) Replacement_cost değerine göre gruplama
+Film sayısı 50’den fazla olan replacement_cost değerleri ve film sayıları
+
+SELECT replacement_cost, COUNT(*) AS film_sayisi, 'Replacement Cost > 50' AS sorgu
+FROM film
+GROUP BY replacement_cost
+HAVING COUNT(*) > 50
+ORDER BY film_sayisi DESC;
+
+3) Customer tablosunda store_id değerlerine karşılık müşteri sayıları
+
+SELECT store_id, COUNT(*) AS musteri_sayisi, 'Store Müşteri Sayısı' AS sorgu
+FROM customer
+GROUP BY store_id;
+
+4) City tablosunu country_id’ye göre gruplama
+En fazla şehir barındıran country_id ve şehir sayısı
+
+SELECT country_id, COUNT(*) AS sehir_sayisi, 'En Fazla Şehirli Country' AS sorgu
+FROM city
+GROUP BY country_id
+ORDER BY sehir_sayisi DESC
+LIMIT 1;

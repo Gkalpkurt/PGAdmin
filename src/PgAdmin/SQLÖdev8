@@ -1,0 +1,64 @@
+1)
+CREATE TABLE employee (
+    id INTEGER PRIMARY KEY,
+    name VARCHAR(50),
+    birthday DATE,
+    email VARCHAR(100)
+);
+
+2)
+INSERT INTO employee (id, name, birthday, email) VALUES
+(1, 'Ahmet Yılmaz', '1987-03-12', 'ahmet.yilmaz@example.com'),
+(2, 'Ayşe Demir', '1990-07-25', 'ayse.demir@example.com'),
+(3, 'John Doe', '1978-11-09', 'john.doe@example.com'),
+(4, 'Elif Kaya', '1995-02-18', 'elif.kaya@example.com'),
+(5, 'Mehmet Çelik', '1983-06-30', 'mehmet.celik@example.com');
+
+3)
+
+1. id'ye göre name güncelle
+UPDATE employee
+SET name = 'Updated Name'
+WHERE id = 1;
+
+2. name'e göre email güncelle
+UPDATE employee
+SET email = 'updated.mail@example.com'
+WHERE name = 'John Doe';
+
+3. birthday'e göre name güncelle
+UPDATE employee
+SET name = 'Birthday Updated'
+WHERE birthday = '1990-07-25';
+
+4. email'e göre birthday güncelle
+UPDATE employee
+SET birthday = '2000-01-01'
+WHERE email = 'elif.kaya@example.com';
+
+5. id'ye göre email güncelle
+UPDATE employee
+SET email = 'id20.update@example.com'
+WHERE id = 20;
+
+4)
+
+1. id'ye göre sil
+DELETE FROM employee
+WHERE id = 5;
+
+2. name'e göre sil
+DELETE FROM employee
+WHERE name = 'Ayşe Demir';
+
+3. birthday'e göre sil
+DELETE FROM employee
+WHERE birthday = '1987-03-12';
+
+4. email'e göre sil
+DELETE FROM employee
+WHERE email = 'john.doe@example.com';
+
+5. id aralığına göre sil
+DELETE FROM employee
+WHERE id BETWEEN 40 AND 45;
